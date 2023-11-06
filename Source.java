@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Node<T> {
   T val;
   Node<T> next;
@@ -10,8 +13,13 @@ class Node<T> {
 
 class Source {
   public static int sumList(Node<Integer> head) {
-    // todo
-    return;
+    int sum = 0;
+    Node<Integer> current = head;
+    while (current != null){   //While loop that reads head of linked list input and exits once there is no more head values.
+      sum += current.val;
+      current = current.next;
+    }
+    return sum;
   }
 
   public static void main(String[] args) {
